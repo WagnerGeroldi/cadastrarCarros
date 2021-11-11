@@ -28,8 +28,8 @@
                 <td><%= car.brand %></td>
                 <td><%= car.year %></td>
                 <td><%= car.color %></td>
-                <td><a href="">editar</a></td>
-                <td><a href="/remove/<%=car._id%>">excluir</a></td>
+                <td><a href="/edit?id=<%=car._id%>">[editar]</a></td>
+                <td><a href="/remove/<%=car._id%>">[excluir]</a></td>
               </tr>
               <% }) %>
            

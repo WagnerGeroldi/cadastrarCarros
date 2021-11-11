@@ -9,6 +9,10 @@ router.post("/add", ListController.add);
 //rota pagina lista
 router.get("/list", ListController.list);
 
+//rota pagina editar carro
+router.get("/edit", ListController.pageEdit);
+router.post('/edit/:id', ListController.edit);
+
 //remover usuarios
 router.get('/remove/:id', ListController.removeCar)
 

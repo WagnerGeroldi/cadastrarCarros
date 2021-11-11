@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <main class="container">
+      <section class="top">
+        <h2>Editar Carro</h2>
+        <p>
+          Nesta seção você vai editar um veículo
+        </p>
+      </section>
+      <section class="form">
+        <form action="/edit/<%= carro._id %>" method="POST"> <!--cuidar para colocar o id para editar-->
+          <div class="item-form">
+            <label for="car"> Carro </label>
+            <input
+              type="text"
+              name="car"
+              id="car"
+              placeholder="Carro..."
+              value="<%= carro.car %>"
+            />
+          </div>
+          <div class="item-form">
+            <label for="brand"> Marca </label>
+            <input
+              type="text"
+              name="brand"
+              id="brand"
+              placeholder="Marca..."
+              value="<%= carro.brand %>"
+            />
+          </div>
+          <div class="item-form">
+            <label for="year"> Ano </label>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="Ano..."
+              value="<%= carro.year %>"
+            />
+          </div>
+          <div class="item-form">
+            <label for="color"> Cor </label>
+            <input
+              type="text"
+              name="color"
+              id="color"
+              placeholder="Cor..."
+              value="<%= carro.color %>"
+            />
+          </div>
+          <button type="submit">Alterar</button>
+          <% if(typeof message !== 'undefined') { %>
+            <%= message %>
+            <a href="/list">Voltar a lista</a>
+         <% } %>
+        </form>
+      </section>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
