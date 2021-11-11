@@ -1,13 +1,16 @@
 const router = require("express").Router();
 
-const LisController = require("../controllers/index");
+const ListController = require("../controllers/index");
 
 //rota pagina inicial
-router.get("/", LisController.index);
-router.post("/add", LisController.add);
+router.get("/", ListController.index);
+router.post("/add", ListController.add);
 
 //rota pagina lista
-router.get("/list", LisController.list);
+router.get("/list", ListController.list);
+
+//remover usuarios
+router.get('/remove/:id', ListController.removeCar)
 
 
 router.use((req, res) => {

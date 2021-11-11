@@ -1,8 +1,5 @@
 /*imports */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
-@import '/css/list.css';
-
-
 :root {
   --color-gradient: linear-gradient(to right, #005c97, #363795);
   --color-a: linear-gradient(to left, #007cc9, #5659ec);
@@ -98,6 +95,11 @@ main .form form button {
   font-size: 1.4em;
   width: 80%;
   margin: auto;
+  cursor: pointer;
+}
+
+main .form form button:hover {
+  background: var(--color-a);
 }
 
 main .form form a {
@@ -154,5 +156,30 @@ footer p {
     width: 100%;
     bottom: 0;
   }
+}
+
+/*page list css */
+.table {
+  overflow-x: auto;
+}
+
+.table table, .table td {
+  border: 1px solid #474747;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.table table .title, .table td .title {
+  text-align: center;
+  font-weight: 600;
+  background: var(--color-a);
+  color: white;
+}
+
+.table table .index, .table td .index {
+  color: white;
+  background: var(--color-gradient);
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,10 +30,19 @@ function index(req, res) {
       users,
     });
   }
+
+  async function removeCar(req, res) {
+    const { id } = req.params;
+  
+    await ListModel.deleteOne({ _id: id });
+  
+      res.redirect("/list");
+  }
   
   module.exports = {
       index,
       list,
-      add
+      add,
+      removeCar,
   
   }
