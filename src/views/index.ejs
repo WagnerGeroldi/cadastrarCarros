@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <main class="container">
+      <section>
+        <h2>Bem-vindo(a)</h2>
+        <p>
+          Aqui você poderar criar uma listagem de veículos, cadastre os veículos
+          necessários, depois consulte sua lista, edite ou exclua!
+        </p>
+      </section>
+      <section class="form">
+        <form action="/add" method="POST">
+          <div class="item-form">
+            <label for="car"> Carro </label>
+            <input
+              type="text"
+              name="car"
+              id="car"
+              placeholder="Carro..."
+            />
+          </div>
+          <div class="item-form">
+            <label for="brand"> Marca </label>
+            <input
+              type="text"
+              name="brand"
+              id="brand"
+              placeholder="Marca..."
+            />
+          </div>
+          <div class="item-form">
+            <label for="year"> Ano </label>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="Ano..."
+            />
+          </div>
+          <div class="item-form">
+            <label for="color"> Cor </label>
+            <input
+              type="text"
+              name="color"
+              id="color"
+              placeholder="Cor..."
+            />
+          </div>
+          <button type="submit">Cadastrar</button>
+          <a href="/list">Visualizar Lista</a>
+        </form>
+      </section>
+      <% if(cadastro) { %>
+        <p>Enviado com sucesso!</p>
+        <%}%>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

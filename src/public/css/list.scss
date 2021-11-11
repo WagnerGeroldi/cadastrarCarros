@@ -1,0 +1,28 @@
+.table {
+
+    overflow-x: auto;
+
+    table, td {
+        border: 1px solid rgb(71, 71, 71);
+        border-collapse: collapse;
+        margin: auto;
+        margin-top: 50px;
+        padding: 10px;
+
+
+        .title {
+            text-align: center;
+            font-weight: 600;
+            background: var(--color-a);
+            color: white;
+        }
+        
+        .index {
+            color: white;
+            background: var(--color-gradient);
+        }
+     }
+     
+
+}
+

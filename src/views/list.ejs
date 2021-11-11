@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <main class="container">
+      <div class="table">
+          <a href="/">Voltar ao início</a>
+        <table>
+          <thead>
+            <tr class="title">
+              <td colspan="6">LISTA DE VEÍCULOS</td>
+            </tr>
+            <tr class="index">
+              <td>Carro</td>
+              <td>Marca</td>
+              <td>Ano</td>
+              <td>Cor</td>
+              <td>Editar</td>
+              <td>Excluir</td>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <% users.forEach(car => { %>
+                <tr>
+                <td><%= car.car %></td>
+                <td><%= car.brand %></td>
+                <td><%= car.year %></td>
+                <td><%= car.color %></td>
+                <td><a href="">editar</a></td>
+                <td><a href="">excluir</a></td>
+              </tr>
+              <% }) %>
+           
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">Atualizado dia 11/11/2021</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

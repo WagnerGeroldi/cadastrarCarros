@@ -1,0 +1,24 @@
+.table {
+  overflow-x: auto;
+}
+
+.table table, .table td {
+  border: 1px solid #474747;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.table table .title, .table td .title {
+  text-align: center;
+  font-weight: 600;
+  background: var(--color-a);
+  color: white;
+}
+
+.table table .index, .table td .index {
+  color: white;
+  background: var(--color-gradient);
+}
+/*# sourceMappingURL=list.css.map */
